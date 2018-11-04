@@ -13,12 +13,16 @@ pipeline {
   stages {
       stage("Build"){
           steps{
-            sh "mvn -B -DskipTests clean package"
+            sh "./.scripts/logger.sh 'Build Started'"
+            sh "./.scripts/build.sh"
+            sh "./.scripts/logger.sh 'Build Finished'"
           }
       }
       stage("Test"){
           steps{
-            sh "mvn test"
+            sh "./.scripts/logger.sh 'Test Started'"
+            sh "./.scripts/test.sh"
+            sh "./.scripts/logger.sh 'Test Finished'"
           }
          post {
             always {
