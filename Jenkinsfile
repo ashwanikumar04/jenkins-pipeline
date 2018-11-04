@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 
-//@Library(['jenkins-sl'])_
+@Library(['jenkins-sl'])_
 
 pipeline {
   agent {
@@ -17,9 +17,6 @@ pipeline {
   }
   stages {
       stage("Build"){
-          libraries {
-        lib("jenkins-sl")
-    }
           steps{
             sh "./scripts/logger.sh 'Build Started'"
             sh "echo ${new helpers().getCurrentTime()}"
