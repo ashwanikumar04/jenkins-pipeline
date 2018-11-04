@@ -1,4 +1,4 @@
-
+@Library('jenkins_sl')
 pipeline {
   agent {
         docker {
@@ -6,7 +6,6 @@ pipeline {
             args '-v /root/.m2:/root/.m2'
         }
   }
- library "jenkins-sl"
   triggers {
 
       pollSCM("* * * * *")
