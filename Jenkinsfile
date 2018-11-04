@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 
-@Library(['jenkins-sl']) _
+@Library(['jenkins-sl'])_
 
 pipeline {
   agent {
