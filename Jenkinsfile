@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 
-@Library(['jenkins-sl'])_
+//@Library(['jenkins-sl'])_
 
 pipeline {
   agent {
@@ -9,6 +9,9 @@ pipeline {
             args '-v /root/.m2:/root/.m2'
         }
   }
+   libraries {
+        lib("jenkins-sl")
+    }
   triggers {
 
       pollSCM("* * * * *")
