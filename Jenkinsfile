@@ -17,9 +17,8 @@ pipeline {
   stages {
       stage("Build"){
           steps{
-            new helpers().getCurrentTime()
             sh "./scripts/logger.sh 'Build Started'"
-            //sh "echo ${getCurrentTime()}"
+            sh "echo ${new helpers().getCurrentTime()}"
             sh "./scripts/build.sh"
             sh "./scripts/logger.sh 'Build Finished'"
           }
