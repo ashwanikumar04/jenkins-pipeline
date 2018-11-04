@@ -9,6 +9,12 @@ public class CalculatorTest {
     @Test
     public void givenTwoIntegersWhenAddThenReturnSum() {
         Calculator calculator = new Calculator();
+        assertEquals(3, calculator.add(1, 2));
+    }
+
+    @Test
+    public void givenTwoSameIntegersWhenAddThenReturnSum() {
+        Calculator calculator = new Calculator();
         assertEquals(2, calculator.add(1, 1));
     }
 }
