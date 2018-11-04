@@ -17,4 +17,10 @@ public class CalculatorTest {
         Calculator calculator = new Calculator();
         assertEquals(2, calculator.add(1, 1));
     }
+
+    @Test
+    public void givenTwoSameIntegersWhenAddThenReturnDifference() {
+        Calculator calculator = new Calculator();
+        assertEquals(2, calculator.minus(3, 1));
+    }
 }
