@@ -13,6 +13,8 @@ pipeline {
   stages {
       stage("Build"){
           steps{
+            sh "pwd"
+            sh "ls"
             sh "./.scripts/logger.sh 'Build Started'"
             sh "./.scripts/build.sh"
             sh "./.scripts/logger.sh 'Build Finished'"
