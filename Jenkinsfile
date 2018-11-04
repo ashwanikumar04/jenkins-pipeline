@@ -17,6 +17,7 @@ pipeline {
   stages {
       stage("Build"){
           steps{
+            sh "echo ${getCurrentTime()}"
             sh "pwd"
             sh "ls"
             sh "./scripts/logger.sh 'Build Started'"
