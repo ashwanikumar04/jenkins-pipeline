@@ -15,16 +15,16 @@ pipeline {
           steps{
             sh "pwd"
             sh "ls"
-            sh "./.scripts/logger.sh 'Build Started'"
-            sh "./.scripts/build.sh"
-            sh "./.scripts/logger.sh 'Build Finished'"
+            sh "./scripts/logger.sh 'Build Started'"
+            sh "./scripts/build.sh"
+            sh "./scripts/logger.sh 'Build Finished'"
           }
       }
       stage("Test"){
           steps{
-            sh "./.scripts/logger.sh 'Test Started'"
-            sh "./.scripts/test.sh"
-            sh "./.scripts/logger.sh 'Test Finished'"
+            sh "./scripts/logger.sh 'Test Started'"
+            sh "./scripts/test.sh"
+            sh "./scripts/logger.sh 'Test Finished'"
           }
          post {
             always {
