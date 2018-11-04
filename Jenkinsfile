@@ -9,9 +9,7 @@ pipeline {
             args '-v /root/.m2:/root/.m2'
         }
   }
-   libraries {
-        lib("jenkins-sl")
-    }
+   
   triggers {
 
       pollSCM("* * * * *")
@@ -19,6 +17,9 @@ pipeline {
   }
   stages {
       stage("Build"){
+          libraries {
+        lib("jenkins-sl")
+    }
           steps{
             sh "./scripts/logger.sh 'Build Started'"
             sh "echo ${new helpers().getCurrentTime()}"
