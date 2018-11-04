@@ -23,4 +23,10 @@ public class CalculatorTest {
         Calculator calculator = new Calculator();
         assertEquals(2, calculator.minus(3, 1));
     }
+
+    @Test
+    public void givenTwoIntegersWhenAddThenReturnDifference() {
+        Calculator calculator = new Calculator();
+        assertEquals(3, calculator.minus(4, 1));
+    }
 }
