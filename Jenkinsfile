@@ -1,4 +1,7 @@
-@Library('jenkins_sl')
+#!/usr/bin/env groovy
+
+@Library(['jenkins-sl']) _
+
 pipeline {
   agent {
         docker {
