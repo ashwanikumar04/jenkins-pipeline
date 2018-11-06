@@ -18,7 +18,7 @@ pipeline {
   stages {
       stage("Build"){
           steps{
-            //sh "./scripts/logger.sh 'Build Started'"
+            sh "./scripts/logger.sh 'Build Started'"
             logger 'Build Started'
            
             script {
