@@ -22,7 +22,7 @@ pipeline {
 
             script {
                 def info = new commitinfo().call("");
-                logger '${info.author}'
+                logger "${info.author}"
             }
             script {
                 def helpers = new helpers();
