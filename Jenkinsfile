@@ -11,15 +11,18 @@ pipeline {
   }
    
   triggers {
-
       pollSCM("* * * * *")
-
   }
   stages {
       stage("Build"){
           steps{
             sh "./scripts/logger.sh 'Build Started'"
             logger 'Build Started'
+
+            script {
+                def helpers = new commitinfo();
+                sh "echo ${helpers.call()}"
+            }
            
             script {
                 def helpers = new helpers();
