@@ -4,8 +4,9 @@
 
 pipeline {
   agent {
-        docker {
-            image 'maven:3-alpine'
+        dockerfile {
+            filename 'Dockerfile'
+            dir '.'
             args '-v /root/.m2:/root/.m2'
         }
   }
