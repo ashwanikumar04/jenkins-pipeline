@@ -20,12 +20,10 @@ pipeline {
             sh "./scripts/logger.sh 'Build Started'"
             logger 'Build Started'
 
-            commitinfo ''
-
-            logger '${GIT-MESSAGE}'
-            logger '${GIT-COMMIT}'
-            logger '${GIT-AUTHOR}'
-           
+            script {
+                def info = new commitinfo.call("");
+                logger '${info.author}'
+            }
             script {
                 def helpers = new helpers();
                 sh "echo ${helpers.getCurrentTime()}"
