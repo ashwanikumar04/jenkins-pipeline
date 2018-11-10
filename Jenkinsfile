@@ -21,7 +21,7 @@ pipeline {
             logger 'Build Started'
 
             script {
-                def info = new commitinfo.call("");
+                def info = new commitinfo().call("");
                 logger '${info.author}'
             }
             script {
