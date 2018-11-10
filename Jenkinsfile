@@ -20,7 +20,8 @@ pipeline {
             sh "./scripts/logger.sh 'Build Started'"
             logger 'Build Started'
 
-            commitinfo
+            commitinfo ''
+
             logger '${GIT-MESSAGE}'
             logger '${GIT-COMMIT}'
             logger '${GIT-AUTHOR}'
