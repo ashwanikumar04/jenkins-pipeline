@@ -20,10 +20,10 @@ pipeline {
             sh "./scripts/logger.sh 'Build Started'"
             logger 'Build Started'
 
-            script {
-                def helpers = new commitinfo();
-                sh "echo ${helpers.call()}"
-            }
+            commitinfo
+            logger '${GIT-MESSAGE}'
+            logger '${GIT-COMMIT}'
+            logger '${GIT-AUTHOR}'
            
             script {
                 def helpers = new helpers();
