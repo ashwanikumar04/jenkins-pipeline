@@ -22,7 +22,7 @@ pipeline {
 
             script {
                 def info = new commitinfo().call("");
-                sh "echo ${info.author}"got
+                sh "echo ${info.author}"
                 sh "echo ${info.commit}"
                 sh "echo ${info.shortCommit}"
                 sh "echo ${info.message}"
